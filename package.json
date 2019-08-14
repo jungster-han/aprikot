@@ -28,7 +28,7 @@
     "ng:serve:web": "npm run postinstall:web && ng serve -o",
     "electron:serve-tsc": "tsc -p tsconfig-serve.json",
     "electron:serve": "wait-on http-get://localhost:4200/ && npm run electron:serve-tsc && electron . --serve",
-    "electron:local": "npm run build:prod && electron .",
+    "electron:local": "electron .",
     "electron:linux": "npm run build:prod && electron-builder build --linux",
     "electron:windows": "npm run build:prod && electron-builder build --windows",
     "electron:mac": "npm run build:prod && electron-builder build --mac",
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.800.2",
-    "@angular/cli": "8.0.2",
+    "@angular/cli": "8.1.0",
     "@angular/common": "8.0.0",
     "@angular/compiler": "8.0.0",
     "@angular/compiler-cli": "8.0.0",
@@ -49,6 +49,7 @@
     "@angular/platform-browser": "8.0.0",
     "@angular/platform-browser-dynamic": "8.0.0",
     "@angular/router": "8.0.0",
+    "@ngrx/schematics": "^8.2.0",
     "@ngx-translate/core": "11.0.1",
     "@ngx-translate/http-loader": "4.0.0",
     "@types/jasmine": "3.3.13",
@@ -82,5 +83,13 @@
   },
   "engines": {
     "node": ">=10.9.0"
+  },
+  "dependencies": {
+    "@angular/animations": "^8.2.2",
+    "@angular/cdk": "^8.1.2",
+    "@angular/material": "^8.1.2",
+    "@ngrx/effects": "^8.2.0",
+    "@ngrx/store": "^8.2.0",
+    "hammerjs": "^2.0.8"
   }
 }
