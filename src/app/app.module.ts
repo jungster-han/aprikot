@@ -15,13 +15,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { HomeModule } from './home/home.module';
-
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material-module';
 import { MenubarComponent } from './components/menubar/menubar.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { WorkspaceComponent } from './components/workspace/workspace.component';
+import { HomeComponent } from './home/home.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -29,7 +28,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, MenubarComponent, ProfileComponent, WorkspaceComponent],
+  declarations: [AppComponent, HomeComponent,
+    MenubarComponent, ProfileComponent, WorkspaceComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -38,7 +38,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     HttpClientModule,
     CoreModule,
     SharedModule,
-    HomeModule,
     AppRoutingModule,
     TranslateModule.forRoot({
       loader: {

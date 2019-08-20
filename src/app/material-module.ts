@@ -42,7 +42,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 
 @NgModule({
-  exports: [
+  imports: [
     A11yModule,
     CdkStepperModule,
     CdkTableModule,
