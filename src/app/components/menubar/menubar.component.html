@@ -1,8 +1,8 @@
 <!-- <mat-sidenav #sidenav mode="side" opened class="side-nav" [fixedInViewport]="options.value.fixed"
   [fixedTopGap]="options.value.top" [fixedBottomGap]="options.value.bottom"> -->
-<nav>
+<nav class='sidenav-content'>
   <h1 class='app-name'>Aprikot</h1>
-  <div class='profile-dialogue-icon'>
+  <div class="profile-dialog" (click)="openProfileDialog()">
     <a><i class="material-icons labels">
         assignment_ind
       </i>User Profile</a>
