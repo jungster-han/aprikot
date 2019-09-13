@@ -1,6 +1,13 @@
-<app-menubar></app-menubar>
-<div class="container">
-    <h1 class="title">
-      {{ 'PAGES.HOME.TITLE' | translate }}
-    </h1>
-  </div>
+<ng-container>
+
+  <mat-sidenav-container class="container">
+    <mat-sidenav #sidenav mode="side" opened class="sidenav">
+      <app-menubar></app-menubar>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <h1 class="title">
+        {{ 'PAGES.HOME.TITLE' | translate }}
+      </h1>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</ng-container>

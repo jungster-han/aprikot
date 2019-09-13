@@ -18,9 +18,9 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material-module';
 import { MenubarComponent } from './components/menubar/menubar.component';
-import { ProfileComponent } from './components/profile/profile.component';
 import { WorkspaceComponent } from './components/workspace/workspace.component';
 import { HomeComponent } from './home/home.component';
+import { ProfileDialogComponent } from './components/profile-dialog/profile-dialog.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -29,7 +29,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [AppComponent, HomeComponent,
-    MenubarComponent, ProfileComponent, WorkspaceComponent],
+    MenubarComponent, WorkspaceComponent, ProfileDialogComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -47,6 +47,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
+  entryComponents: [ProfileDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
